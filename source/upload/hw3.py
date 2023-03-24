@@ -5,7 +5,7 @@ Fri Mar 24, by Jiwon Jeong
 
 def get_fixed_price(discount_percentage, discounted_price):
     """
-    gets percentage of discount and discounted price of something, calculates original price by arguments, and returns original price.
+    Gets percentage of discount and discounted price of something, calculates original price by arguments, and returns original price.
         Args:
             discount_percentage : percentage of discount.
             discounted_price : discounted price of something to be calculated.
@@ -17,7 +17,7 @@ def get_fixed_price(discount_percentage, discounted_price):
 
 def get_int_input(prompt_message):
     """
-    shows message and gets int by prompt.
+    Shows message and gets int by prompt.
         Args:
             prompt_message : string to show in prompt when gets input by user.
         Returns:

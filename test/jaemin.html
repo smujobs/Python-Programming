@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위험!</title>
+  <style>
+    body {
+      background-color: blue;
+    }
+    .main {
+      width: 100px;
+      height: 100px;
+      justify-content: center;
+      display: block;
+    }
+    button {
+      width: 100px;
+      height: 50px;
+      background-color: red;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <button>push this</button>
+  </div>
+  <h1></h1>
+  <script>
+    var string1 = 'ㅁ닝라ㅓㅣㅋ;후지다하옿키타ㅡ이닝하니ㅏ우하ㅣㄴ';
+    var string2 = 'ㄴㅇㅎ;ㅣㅋ퉃;ㅣㅏㅈ도시;나ㅜㅇㄴㅎ;ㅣ만ㅇ후;ㅣ카ㅜ';
+    var string3 = 'sdl;fknz;lkndg;wkne;glaskdjgn;ls';
+
+    var counter = 0;
+
+    var button = document.querySelector('button');
+    var text = document.querySelector('h1');
+    var body = document.querySelector('body');
+    
+    button.addEventListener('click', ()=> {
+      activator = true;
+    })
+    
+    function repeatString() {
+      if (activator) {
+        if (counter == 0) {
+        text.innerText = string1.repeat(500);
+        counter++;
+      } else if (counter == 1) {
+        text.innerText = string2.repeat(500);
+        counter++;
+      } else {
+        text.innerText = string3.repeat(500);
+        counter = 0;
+      }
+      }
+    }
+    function showImage() {
+      body.style.background = 'URL(https://cdn.pixabay.com/photo/2014/11/05/20/43/ghost-518322__340.jpg)';
+    }
+    setInterval(repeatString, 100);
+    setTimeout(showImage, 5000);
+  </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 def disp_multi_table(num):
     for sub in range(1, 10):
-        print(f'{num} x {sub} = {str(num * sub).rjust(2)}')
+        print(f'{num} x {sub} = {num * sub:2d}')
         
 
 def input_pos_num():

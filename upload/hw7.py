@@ -5,14 +5,14 @@ shopping_bag : dict = {}
 def get_user_input(message_to_show):
     return input(message_to_show)
 
-def create_item(tgt_list : list, product_name : str, product_quantity : int, list_name : str):
+def create_item(tgt_list : dict, product_name : str, product_quantity : int, list_name : str):
     tgt_list[product_name] = product_quantity
     print(f'{list_name}에 {product_name} {product_quantity}개가 담겼습니다.')
 
-def read_item(tgt_list : list):
+def read_item(tgt_list : dict):
     print('장바구니 보기:', tgt_list)
 
-def search_item(tgt_list : list, product_name : str):
+def search_item(tgt_list : dict, product_name : str):
     if product_name in tgt_list:
         print(f'{product_name}은(는) {tgt_list[product_name]}개 담겨 있습니다.')
     else:

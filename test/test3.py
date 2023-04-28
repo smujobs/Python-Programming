@@ -1,12 +1,23 @@
-def disp_multi_table(num):
-    for sub in range(1, 10):
-        print(f'{num} x {sub} = {num * sub:2d}')
-        
+# 쇼핑몰 장바구니 시뮬레이션 프로그램 작성, 202310977 정지원, Fri Apr 28
 
-def input_pos_num():
-    n = 0
-    while n <= 0:
-        n = int(input('구구단에 들어갈 양의 정수를 입력하세요: '))
-    return n
+shopping_bag : list = []
 
-disp_multi_table(input_pos_num())
+def get_user_input(message_to_show):
+    return input(message_to_show)
+
+def create_item(tgt_list : list, product_name : str list_name : str):
+    tgt_list.append(product_name)
+    print(f'{list_name}에 {product_name} {product_quantity}개가 담겼습니다.')
+
+def read_item(tgt_list : list):
+    print('장바구니 보기:', tgt_list)
+
+# Main Unit
+
+while True:
+    product_name = str(get_user_input('추가할 상품의 상품명을 입력하세요: '))
+    if product_name != '':
+        create_item(shopping_bag, product_name, '장바구니')
+    else: break
+
+read_item(shopping_bag)

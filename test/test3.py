@@ -5,9 +5,9 @@ shopping_bag : list = []
 def get_user_input(message_to_show):
     return input(message_to_show)
 
-def create_item(tgt_list : list, product_name : str list_name : str):
+def create_item(tgt_list : list, product_name : str, list_name : str):
     tgt_list.append(product_name)
-    print(f'{list_name}에 {product_name} {product_quantity}개가 담겼습니다.')
+    print(f'{list_name}에 {product_name}가 담겼습니다.')
 
 def read_item(tgt_list : list):
     print('장바구니 보기:', tgt_list)

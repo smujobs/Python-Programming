@@ -56,11 +56,11 @@ class Score_file:
 
 # Main Program
 
-new_score_filename = Score_file(input('Enter file name: '))
+score_file = Score_file(input('Enter file name: '))
 
-if new_score_filename.check_file_existence():
-    new_score_filename.read_file()
+if score_file.check_file_existence():
+    score_file.read_file()
 else:
-    score_list: list = new_score_filename.get_score_input()
-    new_score_filename.write_file(score_list)
-    new_score_filename.read_file()
+    score_list: list = score_file.get_score_input()
+    score_file.write_file(score_list)
+    score_file.read_file()

@@ -44,9 +44,9 @@ class my_dictionary(file_management):
         self.__buildGUI()
 
     def __buildGUI(self):
-        self.__create_top_inputs().pack()
-        self.__create_middle_inputs().pack()
-        self.__create_bottom_btns().pack()
+        self.__create_top_inputs().grid(row=0, column=0, sticky='e')
+        self.__create_middle_inputs().grid(row=1, column=0, sticky='e')
+        self.__create_bottom_btns().grid(row=2, column=0, sticky='w')
     
     def __create_top_inputs(self):
         top_frame = ttk.Frame(self.window)

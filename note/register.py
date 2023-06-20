@@ -8,10 +8,10 @@ grade = tk.IntVar()
 grades = ['1학년', '2학년', '3학년', '4학년']
 hobbies = ['영화시청', '음악감상', '사진찍기', '운동']
 
-ifUserWatchMovie = tk.IntVar()
-ifUserListenMusic = tk.IntVar()
-ifUserTakePhoto = tk.IntVar()
-ifUserExercise = tk.IntVar()
+isUserWatchMovie = tk.IntVar()
+isUserListenMusic = tk.IntVar()
+isUserTakePhoto = tk.IntVar()
+isUserExercise = tk.IntVar()
 
 userGrade = 0
 
@@ -35,10 +35,10 @@ def buildGUI():
     thirdFrame = ttk.Frame(win)
     hobbyLabel = ttk.Label(thirdFrame, text='취미:')
     hobbyLabel.grid()
-    movieCheckBtn = ttk.Checkbutton(thirdFrame, text=hobbies[0], variable=ifUserWatchMovie)
-    musicCheckBtn = ttk.Checkbutton(thirdFrame, text=hobbies[1], variable=ifUserListenMusic)
-    photoCheckBtn = ttk.Checkbutton(thirdFrame, text=hobbies[2], variable=ifUserTakePhoto)
-    exerciseCheckBtn = ttk.Checkbutton(thirdFrame, text=hobbies[3], variable=ifUserExercise)
+    movieCheckBtn = ttk.Checkbutton(thirdFrame, text=hobbies[0], variable=isUserWatchMovie)
+    musicCheckBtn = ttk.Checkbutton(thirdFrame, text=hobbies[1], variable=isUserListenMusic)
+    photoCheckBtn = ttk.Checkbutton(thirdFrame, text=hobbies[2], variable=isUserTakePhoto)
+    exerciseCheckBtn = ttk.Checkbutton(thirdFrame, text=hobbies[3], variable=isUserExercise)
     movieCheckBtn.grid(row=0, column=1)
     musicCheckBtn.grid(row=0, column=2)
     photoCheckBtn.grid(row=0, column=3)
@@ -57,13 +57,13 @@ def printInfo():
     print(name.get())
     userGrade = grade.get()
     print(userGrade + 1)
-    if ifUserWatchMovie.get() == 1:
+    if isUserWatchMovie.get() == 1:
         print(hobbies[0])
-    if ifUserListenMusic.get() == 1:
+    if isUserListenMusic.get() == 1:
         print(hobbies[1])
-    if ifUserTakePhoto.get() == 1:
+    if isUserTakePhoto.get() == 1:
         print(hobbies[2])
-    if ifUserExercise.get() == 1:
+    if isUserExercise.get() == 1:
         print(hobbies[3])
     
     
